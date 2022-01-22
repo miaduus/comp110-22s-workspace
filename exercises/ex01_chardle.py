@@ -14,19 +14,19 @@ print("Searching for " + guess_single_character + " in " + guess_word)
 matching_characters = 0
 
 if guess_word[0] == guess_single_character:
-    print(guess_single_character + " was found at index 0")
+    print(guess_single_character + " found at index 0")
     matching_characters = matching_characters + 1
 if guess_word[1] == guess_single_character: 
-    print(guess_single_character + " was found at index 1")
+    print(guess_single_character + " found at index 1")
     matching_characters = matching_characters + 1
 if guess_word[2] == guess_single_character:
-    print(guess_single_character + " was found at index 2")
+    print(guess_single_character + " found at index 2")
     matching_characters = matching_characters + 1
 if guess_word[3] == guess_single_character:
-    print(guess_single_character + " was found at index 3")
+    print(guess_single_character + " found at index 3")
     matching_characters = matching_characters + 1
 if guess_word[4] == guess_single_character:
-    print(guess_single_character + " was found at index 4")
+    print(guess_single_character + " found at index 4")
     matching_characters = matching_characters + 1
 
 if matching_characters == 0:
