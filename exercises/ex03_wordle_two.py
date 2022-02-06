@@ -32,15 +32,13 @@ def emojified(guess: str, secret: str) -> str:
         if guess[a] == secret[a]:
             emoji_guess = emoji_guess + GREEN_BOX
             # If character at same index
-            a = a + 1
         else:
             character_match: bool = False
             if character_match == contains_char(secret, guess[a]):
                 emoji_guess = emoji_guess + YELLOW_BOX
                 # Using function to search if char is in word, if true add yellow box
-                a = a + 1
             else:
                 emoji_guess = emoji_guess + WHITE_BOX
                 # If False, character not in word, add white box
-                a = a + 1
+    a = a + 1
     return emoji_guess
