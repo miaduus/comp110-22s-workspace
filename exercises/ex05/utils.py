@@ -22,8 +22,10 @@ def sub(xs: list[int], start_index: int, end_index: int) -> list[int]:
     i: int = start_index
     if start_index < 0:
         i = 0
+    if end_index > len(xs):
+        end_index = len(xs) - 1
     # If list is empty, start index is higher than lenght of list or end index is less or equal to 0, a empty list is returned
-    if len(xs) == 0 or start_index > len(xs) or end_index <= 0:
+    if len(xs) == 0 or start_index >= len(xs) or end_index <= 0:
         return subset
     # Starting at start index, adding each integer at index i until end index, non inclusive
     while i < end_index:

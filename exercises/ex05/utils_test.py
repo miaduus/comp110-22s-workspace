@@ -11,6 +11,12 @@ def test_only_evens_empty() -> None:
     assert only_evens(list()) == []
 
 
+def test_only_evens_one_number() -> None:
+    """Test if the only evens function returns single even value, if list contain one even integer."""
+    xs: list[int] = [6]
+    assert only_evens(xs) == [6]
+
+
 def test_only_evens_postive_numbers() -> None:
     """Test if function returns list of even integers from a list of positive integers."""
     xs: list[int] = [1, 2, 3, 4, 5, 6]
