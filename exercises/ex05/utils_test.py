@@ -5,7 +5,7 @@ __author__ = "730464966"
 from utils import only_evens, sub, concat
 
 
-# Test for the only evens tests
+# Tests for the only_evens function
 def test_only_evens_empty() -> None:
     """Test if the only evens function returns empty list."""
     assert only_evens(list()) == []
@@ -23,6 +23,7 @@ def test_only_evens_negative_positive_numbers() -> None:
     assert only_evens(xs) == [-2, 0, 2]
 
 
+# Tests for the sub function
 def test_sub_empty() -> None:
     """Test of function returns empty list if given empty list."""
     assert sub(list(), 1, 1) == []
@@ -52,6 +53,7 @@ def test_sub_negative_index() -> None:
     assert sub(xs, -1, 2) == [0, 1]
 
 
+# Tests for the concat function
 def test_concat_empty() -> None:
     """Test if function returns empty list if two empty lists is input for function."""
     assert concat(list(), list()) == []
