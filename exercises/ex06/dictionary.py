@@ -8,6 +8,7 @@ def invert(a_dict: dict[str, str]) -> dict[str, str]:
     result: dict[str, str] = {}
     for key in a_dict:
         result[a_dict[key]] = key
+    # Check if any values where there more than once
     if len(a_dict) == len(result):
         return result
     else:
