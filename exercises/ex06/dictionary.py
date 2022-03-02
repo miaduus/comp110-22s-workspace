@@ -15,9 +15,10 @@ def invert(a_dict: dict[str, str]) -> dict[str, str]:
         raise KeyError
 
 
-def favorite_colors(a_dict: dict[str, str]) -> str:
+def favorite_color(a_dict: dict[str, str]) -> str:
     """Function that takes dict of people and their favorite color and returns the most common color."""
-    favorite_list: list = []
+    favorite_list: list[str] = []
+    favorite: str = ""
     b_list: list[str] = []
     # Collecting values of dict in a list
     for key in a_dict:
@@ -33,7 +34,8 @@ def favorite_colors(a_dict: dict[str, str]) -> str:
     for key in c_dict:
         if c_dict[key] == max(d_list):
             favorite_list.append(key)
-    return favorite_list[0]
+    favorite = favorite_list[0]
+    return favorite
 
 
 def count(a_list: list[str]) -> dict[str, int]:

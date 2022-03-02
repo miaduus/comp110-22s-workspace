@@ -2,7 +2,7 @@
 
 __author__ = "730464966"
 
-from dictionary import invert, favorite_colors, count
+from dictionary import invert, count, favorite_color
 
 
 # Test for the invert function
@@ -28,19 +28,19 @@ def test_invert_longer_str() -> None:
 def test_favorite_colors_onepair() -> None:
     """Test returning favorite color if only one key-value pair is given."""
     a: dict[str, str] = {"Maddie": "blue"}
-    assert favorite_colors(a) == 'blue'
+    assert favorite_color(a) == "blue"
 
 
 def test_favorite_colors_several() -> None:
     """Test returning favorite color if several key-value pair are given, with one favorite color."""
     a: dict[str, str] = {"Maddie": "blue", "Mia": "pink", "Olivia": "pink"}
-    assert favorite_colors(a) == 'pink'
+    assert favorite_color(a) == 'pink'
 
 
 def test_favorite_colors_twofavorite() -> None:
     """Test returning favorite color if several key-value pair are given, with two favorite colors."""
     a: dict[str, str] = {"Maddie": "blue", "Mia": "pink", "Olivia": "pink", "Liz": "blue"}
-    assert favorite_colors(a) == 'blue'
+    assert favorite_color(a) == 'blue'
 
 
 # Test functions for count function
